@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     private Home[] homes;
 
     public GameObject gameOverMenu;
+    public GameObject pauseMenu;
     public Text timeText;
     public Text livesText;
     public Text scoreText;
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
     private void NewGame()
     {
         gameOverMenu.SetActive(false);
+        pauseMenu.SetActive(false);
 
         SetScore(0);
         SetLives(3);
@@ -103,6 +105,15 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void showPaused()
+    {
+        pauseMenu.SetActive(true);
+    }
+
+    public void hidePaused()
+    {
+        pauseMenu.SetActive(false);
+    }
     private IEnumerator CheckForPlayAgain()
     {
         bool playAgain = false;

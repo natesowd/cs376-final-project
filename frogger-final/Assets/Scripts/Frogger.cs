@@ -177,9 +177,12 @@ public class Frogger : MonoBehaviour
         if(Time.timeScale == 1)
         {
             Time.timeScale = 0;
+            FindObjectOfType<GameManager>().showPaused();
+
         } else if(Time.timeScale == 0)
         {
             Time.timeScale = 1;
+            FindObjectOfType<GameManager>().hidePaused();
         }
 
     }
