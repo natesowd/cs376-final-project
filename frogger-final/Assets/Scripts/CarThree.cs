@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-
-public class MoveCycle : MonoBehaviour
+[RequireComponent(typeof(AudioSource))]
+public class CarThree : MonoBehaviour
 {
     public Vector2 direction = Vector2.right;
     public float speed = 1f;
@@ -17,6 +17,8 @@ public class MoveCycle : MonoBehaviour
     {
         leftEdge = Camera.main.ViewportToWorldPoint(Vector3.zero);
         rightEdge = Camera.main.ViewportToWorldPoint(Vector3.right);
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     private void Update()
@@ -33,11 +35,13 @@ public class MoveCycle : MonoBehaviour
         else {
             transform.Translate(direction * speed * Time.deltaTime);
         }
-    }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        // audioSource.PlayOneShot(hitSound);
+        if(Physics2D.OverlapBox(transform.position, new Vector3(0.5f, 0.5f, 0.5f), 0f, LayerMask.GetMask("Player")) != null)
+        {
+            // audioSource = GetComponent<AudioSource>();
+            audioSource.PlayOneShot(hitSound);
+            Debug.Log("Player hit");
+        }
     }
 
 }

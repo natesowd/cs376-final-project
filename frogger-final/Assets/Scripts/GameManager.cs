@@ -2,6 +2,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class GameManager : MonoBehaviour
 {
     private Frogger frogger;
@@ -19,7 +21,9 @@ public class GameManager : MonoBehaviour
 
     private float respawnTime;
 
-    public AudioClip scoreChange;
+    public AudioClip increaseScoreSound;
+
+    public AudioClip gameOverSound;
 
     AudioSource audioSource;
 
@@ -34,6 +38,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         NewGame();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void NewGame()
@@ -96,6 +101,7 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
+        audioSource.PlayOneShot(gameOverSound);
         frogger.gameObject.SetActive(false);
         gameOverMenu.SetActive(true);
 
@@ -135,7 +141,7 @@ public class GameManager : MonoBehaviour
     public void AdvancedRow()
     {
         SetScore(score + 10);
-        // audioSource.PlayOneShot(scoreChange);
+        audioSource.PlayOneShot(increaseScoreSound);
     }
 
     public void HomeOccupied()

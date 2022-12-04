@@ -130,6 +130,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1302050524}
     m_Modifications:
+    - target: {fileID: 3238051286155056092, guid: 980bdf7fa699fbf4f980ad313057807c,
+        type: 3}
+      propertyPath: hitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 29c83ced3e9e04bed84e991b19ab4706, type: 3}
     - target: {fileID: 7589564437641320510, guid: 980bdf7fa699fbf4f980ad313057807c,
         type: 3}
       propertyPath: m_SpriteTilingProperty.drawMode
@@ -258,7 +263,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 45, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &41137023
@@ -896,6 +901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 144788944}
   - component: {fileID: 144788943}
+  - component: {fileID: 144788945}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -920,7 +926,8 @@ MonoBehaviour:
   timeText: {fileID: 1002610743}
   livesText: {fileID: 564978962}
   scoreText: {fileID: 457864535}
-  scoreChange: {fileID: 0}
+  increaseScoreSound: {fileID: 8300000, guid: 500b29035647a4f8aa1348e00c6c1743, type: 3}
+  gameOverSound: {fileID: 8300000, guid: ca7a8ea3dc98840eaaed98d72d35fdf9, type: 3}
 --- !u!4 &144788944
 Transform:
   m_ObjectHideFlags: 0
@@ -936,6 +943,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &144788945
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144788942}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &182072460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1511,6 +1614,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 128940954}
     m_Modifications:
+    - target: {fileID: 5018995822207523044, guid: 3a90b13e6610bc94abc613620e699890,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5018995822207523046, guid: 3a90b13e6610bc94abc613620e699890,
         type: 3}
       propertyPath: m_DrawMode
@@ -2713,6 +2821,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 128940954}
     m_Modifications:
+    - target: {fileID: 5018995822207523044, guid: 3a90b13e6610bc94abc613620e699890,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5018995822207523046, guid: 3a90b13e6610bc94abc613620e699890,
         type: 3}
       propertyPath: m_DrawMode
@@ -2906,6 +3019,11 @@ PrefabInstance:
     - target: {fileID: 5468568161669659849, guid: 41b4189e965e78248a28bced8cb125a1,
         type: 3}
       propertyPath: m_DrawMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468568161669659851, guid: 41b4189e965e78248a28bced8cb125a1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5468568161669659854, guid: 41b4189e965e78248a28bced8cb125a1,
@@ -3486,7 +3604,7 @@ GameObject:
   - component: {fileID: 942615957}
   - component: {fileID: 4262394122415413149}
   - component: {fileID: 942615956}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Frogger
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3802,6 +3920,11 @@ PrefabInstance:
     - target: {fileID: 427151061974828255, guid: 6198e8cca07d22047a5d76887c6895fe,
         type: 3}
       propertyPath: m_DrawMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8495950116948116351, guid: 6198e8cca07d22047a5d76887c6895fe,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5139,6 +5262,11 @@ PrefabInstance:
       propertyPath: m_DrawMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5468568161669659851, guid: 41b4189e965e78248a28bced8cb125a1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5468568161669659854, guid: 41b4189e965e78248a28bced8cb125a1,
         type: 3}
       propertyPath: m_Name
@@ -5430,6 +5558,11 @@ PrefabInstance:
       propertyPath: m_DrawMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8495950116948116351, guid: 6198e8cca07d22047a5d76887c6895fe,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6198e8cca07d22047a5d76887c6895fe, type: 3}
 --- !u!4 &1683477781 stripped
@@ -5445,6 +5578,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1302050524}
     m_Modifications:
+    - target: {fileID: 7589564437641320510, guid: 980bdf7fa699fbf4f980ad313057807c,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8619932971975925152, guid: 980bdf7fa699fbf4f980ad313057807c,
         type: 3}
       propertyPath: m_Name
@@ -5589,6 +5727,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1302050524}
     m_Modifications:
+    - target: {fileID: 7589564437641320510, guid: 980bdf7fa699fbf4f980ad313057807c,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8619932971975925152, guid: 980bdf7fa699fbf4f980ad313057807c,
         type: 3}
       propertyPath: m_Name
@@ -6072,6 +6215,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 344548973}
     m_Modifications:
+    - target: {fileID: -9135340855949529350, guid: 010996052b67a114ab892229f89e35fd,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8905246055900013120, guid: 010996052b67a114ab892229f89e35fd,
         type: 3}
       propertyPath: m_DrawMode
@@ -6426,6 +6574,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 128940954}
     m_Modifications:
+    - target: {fileID: 5018995822207523044, guid: 3a90b13e6610bc94abc613620e699890,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5018995822207523046, guid: 3a90b13e6610bc94abc613620e699890,
         type: 3}
       propertyPath: m_DrawMode
@@ -6807,6 +6960,11 @@ PrefabInstance:
     - target: {fileID: 427151061974828255, guid: 6198e8cca07d22047a5d76887c6895fe,
         type: 3}
       propertyPath: m_DrawMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8495950116948116351, guid: 6198e8cca07d22047a5d76887c6895fe,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7308,6 +7466,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 128940954}
     m_Modifications:
+    - target: {fileID: 5018995822207523044, guid: 3a90b13e6610bc94abc613620e699890,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5018995822207523046, guid: 3a90b13e6610bc94abc613620e699890,
         type: 3}
       propertyPath: m_DrawMode
@@ -7467,6 +7630,11 @@ PrefabInstance:
       propertyPath: m_DrawMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5468568161669659851, guid: 41b4189e965e78248a28bced8cb125a1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5468568161669659854, guid: 41b4189e965e78248a28bced8cb125a1,
         type: 3}
       propertyPath: m_Name
@@ -7486,6 +7654,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1302050524}
     m_Modifications:
+    - target: {fileID: 7589564437641320510, guid: 980bdf7fa699fbf4f980ad313057807c,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8619932971975925152, guid: 980bdf7fa699fbf4f980ad313057807c,
         type: 3}
       propertyPath: m_Name
@@ -7575,6 +7748,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 344548973}
     m_Modifications:
+    - target: {fileID: -9135340855949529350, guid: 010996052b67a114ab892229f89e35fd,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8905246055900013120, guid: 010996052b67a114ab892229f89e35fd,
         type: 3}
       propertyPath: m_DrawMode

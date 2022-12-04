@@ -22,7 +22,7 @@ public class Frogger : MonoBehaviour
 
     private void Update()
     {
-        
+
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
@@ -44,10 +44,11 @@ public class Frogger : MonoBehaviour
             Move(Vector3.down);
         }
 
-        if(Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             TogglePause();
         }
+<<<<<<< HEAD
         if (transform.position.x > 13)
         {
             Death();
@@ -57,6 +58,8 @@ public class Frogger : MonoBehaviour
 
             Death();
         }
+=======
+>>>>>>> 4f40547761b12336bbef7bc5f5d1039c50619586
 
 
 
@@ -65,7 +68,8 @@ public class Frogger : MonoBehaviour
 
     private void Move(Vector3 direction)
     {
-        if (cooldown) {
+        if (cooldown)
+        {
             return;
         }
 
@@ -77,15 +81,23 @@ public class Frogger : MonoBehaviour
         Collider2D barrier = Physics2D.OverlapBox(destination, Vector2.zero, 0f, LayerMask.GetMask("Barrier"));
 
         // Prevent any movement if there is a barrier
-        if (barrier != null) {
+        if (barrier != null)
+        {
             return;
         }
 
         // Attach/detach frogger from the platform
-        if (platform != null) {
+        if (platform != null)
+        {
             transform.SetParent(platform.transform);
+<<<<<<< HEAD
             
         } else {
+=======
+        }
+        else
+        {
+>>>>>>> 4f40547761b12336bbef7bc5f5d1039c50619586
             transform.SetParent(null);
         }
 
@@ -93,6 +105,7 @@ public class Frogger : MonoBehaviour
         if (obstacle != null && platform == null)
         {
             transform.position = destination;
+            // Debug.Log("Collision");
             Death();
         }
         // Conditions pass, move to the destination
@@ -178,24 +191,32 @@ public class Frogger : MonoBehaviour
         bool hitObstacle = other.gameObject.layer == LayerMask.NameToLayer("Obstacle");
         bool onPlatform = transform.parent != null;
 
-        if (enabled && hitObstacle && !onPlatform) {
+        if (enabled && hitObstacle && !onPlatform)
+        {
             Death();
         }
     }
 
     public void TogglePause()
     {
-        if(Time.timeScale == 1)
+        if (Time.timeScale == 1)
         {
             Time.timeScale = 0;
             FindObjectOfType<GameManager>().showPaused();
 
-        } else if(Time.timeScale == 0)
+        }
+        else if (Time.timeScale == 0)
         {
             Time.timeScale = 1;
             FindObjectOfType<GameManager>().hidePaused();
         }
 
     }
+
+    // // When the frogger goes off the screen, it dies
+    // private void OnBecameInvisible()
+    // {
+    //     Death();
+    // }
 
 }
