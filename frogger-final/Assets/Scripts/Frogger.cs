@@ -48,7 +48,16 @@ public class Frogger : MonoBehaviour
         {
             TogglePause();
         }
-    
+        if (transform.position.x > 13)
+        {
+            Death();
+        }
+        else if (transform.position.x < -13)
+        {
+
+            Death();
+        }
+
 
 
 
@@ -75,6 +84,7 @@ public class Frogger : MonoBehaviour
         // Attach/detach frogger from the platform
         if (platform != null) {
             transform.SetParent(platform.transform);
+            
         } else {
             transform.SetParent(null);
         }
@@ -135,6 +145,7 @@ public class Frogger : MonoBehaviour
         // Reset transform to spawn
         transform.rotation = Quaternion.identity;
         transform.position = spawnPosition;
+        transform.SetParent(null);
         farthestRow = spawnPosition.y;
 
         // Reset sprite
