@@ -1,0 +1,56 @@
+2022.11.25
+13:18
+Set the general idea of the project. 
+We want to build a 3D game where the player tries to dodge enemies spawning from a 2D wall.
+Once the enemy spawns, it will go directly to the front, trying to bump into the player.
+
+Player Behavior:
+Moves around the X-axis and Y-axis. Shoots bullet along the positive Z-axis. 
+The player has a health bar of 10 health.
+
+Bullet Behavior:
+Occurs in front of the player every time when the fire button is pressed.
+
+Enemy Behavior:
+The enemy ambushes towards us along the negative Z-axis. 
+When the player's bullet touches enemy, the enemy dies.
+When the enemy goes beyond 
+
+Aesthetic Goals
+1. Challenge 
+- Our game provides player with the challenge to get a better score and maitain a longer play time.
+- Sign of success: The player woud want to get better at the score 
+- Sign of failure: The player has no motive to keep trying
+
+2. Fantasy
+- Our game imitates how spaceship moves and provides players with the fantasy of space fights.
+- Sign of success: The player views it as a simplified version of space fight.
+- Sign of failure: The player fails to imagine themselves as a spaceship commander or themselves in a space fight.
+
+Core Mechanics:
+The player would spend most of their time in moving around dodging the enemies while shoot to kill the most enemies.
+
+Core Loop:
+Spot enemy - Shoot to the enemy - if shooting succeed, stay - if shooting fails, move to dodge
+
+13:00
+Start discussing and designing
+14:20
+Set the Scene and started coding
+15:02
+Finish the Menu and Instruction scene
+15:35
+Finish the restart scene
+17:15
+Finished the Enemy and Player
+17:31
+Finished ScoreKeeper
+19:09
+Finished Development, started overall testing
+19:20
+Finished Documentation
+
+
+
+
+

@@ -1,0 +1,21 @@
+Sprites:
+	Player Ship by Archanix - https://opengameart.org/content/ship-recoloring-001-for-gm-game
+	Missile by samoliver - (https://opengameart.org/content/missile-0)
+	Coin by BizmasterStudios (https://opengameart.org/content/gold-cointoken)
+	Pixel Heart by BenBushnell (https://pixabay.com/illustrations/pixel-heart-heart-pixel-symbol-red-2779422/)
+	Enemies by mikailain (https://www.freepik.com/premium-vector/trooper-fish-robot-enemy-game-sprites_1575132.htm)
+	Lasers by StarNinjas (https://opengameart.org/content/3-lasers)
+
+Audio:
+	Scoring - Short Success Sound Glockenspiel Treasure Video Game by FunWithSound (https://pixabay.com/sound-effects/search/success%20sound/?manual_search=1&order=None)
+	Laser Blast - Blaster 2 - Tutarap (https://pixabay.com/sound-effects/search/laser%20gun/?manual_search=1&order=None)
+	Missile Shoot - Xenonn (https://pixabay.com/sound-effects/search/pew/)
+	HQ Explosion - Quaker540 (https://pixabay.com/sound-effects/search/explosion/?manual_search=1&order=None)
+	Engine - Power Down - noirenex (https://pixabay.com/sound-effects/power-down-7103/)
+	Damage - DAMAGE PRO BUKOTO FM SUNDAY MIX ZONE - DamagePro (https://pixabay.com/sound-effects/damage-pro-bukoto-fm-sunday-mix-zone-111333/)
+
+Code Snippets:
+	Ian Horswill 
+
+Explosion Animation:
+	Red Shark Game Studio (https://assetstore.unity.com/#!/content/66932)
